@@ -1,0 +1,34 @@
+---
+title: "Reproducible Resarch - First Project"
+output: html_notebook
+---
+
+```{r}
+library(dplyr)
+library(ggplot2)
+data <- read.csv('data/activity.csv')
+```
+
+1. Total number of steps:
+```{r}
+sum(data$steps, na.rm = )
+```
+
+2. Histogram of total number of steps taken each day
+```{r}
+grouped <- data %>%
+  filter(!is.na(steps)) %>%
+  group_by(date) %>%
+  summarize(total_steps = sum(steps))
+
+ggplot(grouped, aes(x=total_steps)) +
+  geom_histogram(binwidth = 1000)
+```
+
+3. Mean and Median of total steps per day
+```{r}
+paste('mean: ', mean(grouped$total_steps))
+paste('median: ', median(grouped$total_steps))
+```
+
+
