@@ -161,3 +161,5 @@ ggplot(day_grouping, aes(x=interval, y=avg)) +
 ```
 
 ![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
+
+We see that there is a difference between weekdays and weekends. Specifically, the highest total activity pattern happens on the weekday, but a more consistent activity patterns happens during the weekend.

@@ -106,3 +106,5 @@ ggplot(day_grouping, aes(x=interval, y=avg)) +
   geom_line() +
   facet_grid(isWeekday~.)
 ```
+
+We see that there is a difference between weekdays and weekends. Specifically, the highest total activity pattern happens on the weekday, but a more consistent activity patterns happens during the weekend.
